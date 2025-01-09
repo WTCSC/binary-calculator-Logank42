@@ -1,24 +1,25 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17650028)
 # Binary Calculator
 
-<!--
+This is my take on creating a calculator with multipule implications when it comes to binary calculations.
 
-The following requirements must be met to receive full credit on this assignment. The calculator must handle binary arithmetic operations accurately while following proper error handling procedures and output formatting guidelines.
+## How to use:
+This calculator is able to add, subtract, multiply and divide. It takes 3 inputs; bin1, bin2 and your 
+operator.
 
-- Your solution must have a well-written and thorough README file.
-- The solution must be implemented as a function called `binary_calculator()` with three parameters:
-    - `bin1` - A string parameter representing the first binary number to be used in the calculation. Must contain only 0s and 1s.
-    - `bin2` - A string parameter representing the second binary number to be used in the calculation. Must contain only 0s and 1s.
-    - `operator` - A string containing one of the following arithmetic operators: `'+'`, `'-'`, `'*'`, or `'/'`
-- Do not use Python's built-in `bin()` function.
-- Implement your own binary-to-decimal and decimal-to-binary conversion logic.
-- All binary inputs and outputs should be strings.
-- Handle division by zero by returning `"NaN"`
-- Handle decimal numbers by rounding down to the nearest whole number (flooring).
-- Return `"Error"` for invalid binary inputs (containing characters other than `0` and `1`)
-- Return `"Overflow"` for any operations that overflow (i.e. negative numbers, numbers greater than 8-bits).
-- Outputs must be returned as 8-bit numbers (padded with leading zeros if necessary). For example, the decimal number `5` should be returned as `"00000101"` .
+    When dividing or subtracting, be sure to put your dividen or minuend as bin1, and your divisor or subtrahend as bin2.
 
-Your solution will be tested against various test cases including edge cases, invalid inputs, and all four arithmetic operations.
+    Your operator is what determines what your trying to do. Use the + for addition, the - for subtraction, the * for multiplication and the / for division.
 
- -->
+## Aditional information
+NaN:
+
+When dividing, the calculator checks if you are trying to divide by 0, and will return NaN.
+
+Error:
+
+If you input any number or letter other than 1s and 0s in bin1 and bin2, it will return an error, as you did not input valid binary code.
+
+Overflow:
+
+Eight bit binary code has a cap of 255 and cannot go below 0, so if you are trying to solve for something bigger than 255 or in the negative, it will return an overflow message.
